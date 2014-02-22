@@ -15,7 +15,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 	fieldsets = [
 	('Category', {'fields': ['category']}),
-	('Question', {'fields': ['text']}),
+	('Question', {'fields': ['text', 'image']}),
 	]
 	list_display = ('text', category)
 	search_fields = ['text']
