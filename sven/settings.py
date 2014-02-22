@@ -9,6 +9,8 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+DATABASES = {}
+
 if DEBUG:
 
     DATABASES = {
