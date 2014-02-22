@@ -1,6 +1,6 @@
 # Django settings for sven project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -10,8 +10,9 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {}
+heroku = True
 
-if DEBUG:
+if not heroku:
 
     DATABASES = {
         'default': {
