@@ -1,6 +1,6 @@
 # Django settings for sven project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -82,7 +82,6 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "files/uploads")
 MEDIA_URL = '/uploads/'
 
 # Absolute path to the directory static files should be collected to.
