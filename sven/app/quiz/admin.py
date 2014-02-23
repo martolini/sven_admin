@@ -12,7 +12,9 @@ class QuestionAdmin(admin.ModelAdmin):
   		return u'<a href="%s">%s</a>' %(url,  obj.category)
 
   	def image(obj):
-  		return u'<a href="%s" target="_blank">%s</a>' % (obj.image.url, obj.image)
+  		if obj.image:
+  			return u'<a href="%s" target="_blank">%s</a>' % (obj.image.url, obj.image)
+  		return u''
 
 	category.allow_tags = True
 	image.allow_tags = True

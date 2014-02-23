@@ -13,7 +13,7 @@ class Category(models.Model):
 class Question(models.Model):
 	text = models.TextField()
 	category = models.ForeignKey(Category)
-	image = models.ImageField(upload_to='photos', blank=True)
+	image = models.ImageField(upload_to='photos', blank=True, null=True)
 
 	def __unicode__(self):
 		return self.text
