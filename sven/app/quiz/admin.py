@@ -28,7 +28,13 @@ class QuestionAdmin(admin.ModelAdmin):
 	search_fields = ['text']
 	inlines = [AnswerAdmin]
 
+class CategoryAdmin(admin.ModelAdmin):
 
+	def number_of_questions(obj):
+		return Question.objects.filter(category=obj).count()
 
-admin.site.register(Category)
+	number_of_questions.short_description = "Number of questions"
+	list_display = ('title', number_of_questions)
+
+admin.site.register(Category, CategoryAdmin)
 admin.site.register(Question, QuestionAdmin)

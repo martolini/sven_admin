@@ -1,6 +1,10 @@
 # Django settings for sven project.
 
-DEBUG = False
+import os
+import socket
+
+
+DEBUG = 'cauchy' not in socket.gethostname()
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -9,9 +13,7 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 if DEBUG:
     DATABASES = {
         'default': {
