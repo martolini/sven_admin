@@ -16,6 +16,7 @@ class QuestionAdmin(admin.ModelAdmin):
   			return u'<a href="%s" target="_blank">%s</a>' % (obj.image.url, obj.image)
   		return u''
 
+  	category.admin_order_field = 'category'
 	category.allow_tags = True
 	image.allow_tags = True
 	readyonly_fields = ('image')
